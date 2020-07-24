@@ -1,0 +1,21 @@
+
+
+@media screen and (min-width: 800px) {
+    .office {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .d {
+        display: none;
+    }
+
+    .office {
+        width: 200%;
+    }
+
+    .icons {
+        width: 250%;
+    }
+}

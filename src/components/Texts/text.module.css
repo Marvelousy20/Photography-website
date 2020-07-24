@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+
+body{
+	background: black;
+	color: #fff !important;
+}
+
+.cloudText {
+	font-family: 'Coiny', cursive;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+	background-image: url('../../../public/abstract-abstract-painting-art-artistic-1149019.jpg');
+	background-size: auto;
+	background-attachment: unset;
+    background-position: 0%;
+	font-size: 16vw;
+	animation: clouds-moving infinite 300s;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	animation-timing-function: linear;
+    text-align: center;
+}
+
+@keyframes clouds-moving {
+	0% {
+		background-position: 0%;	
+	}
+	50% {
+		background-position: 100%;	
+	}
+	100% {
+		background-position: 0%;
+	}
+}
+
+.color{
+	color: red;
+	text-align: center;
+	font-size: 17vw;
+	font-family: 'Coiny', cursive;
+}
+
+
+
+@media screen and (max-width: 650px) {
+	.cloudText {
+		margin-top: 15% !important;
+		font-size: 22vw;
+	}
+
+	.mobile {
+		margin: 0 auto !important;
+		margin-top: -9% !important;
+		font-size: 5vw !important;
+		text-align: center !important;
+		max-width: 300px !important;
+	}
+
+	.btn {
+		/* margin-top: 7% !important; */
+		padding: 0.84rem 1.2rem;
+	}
+	
+	.home-title {
+		max-width: 350px !important;
+		margin-top: 3% !important;
+		/* font-weight: 400 !important; */
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.cloudText {
+		font-size: 20vw !important;
+	}
+
+	.home-title {
+		max-width: 250px !important;
+		margin-top: 7% !important;
+		/* font-weight: 400 !important; */
+	}
+}
+
+:root{
+    --bg-color: #D8D8D8;
+}
+
+.home-title span{
+    position: relative;
+    overflow: hidden;
+    display: block;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9rem;
+}
+
+.home-title span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.home-title span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.home-title span:nth-of-type(1)::before,
+.home-title span:nth-of-type(1)::after{
+    animation-delay: 1s;
+}
+
+.home-title span:nth-of-type(2)::before,
+.home-title span:nth-of-type(2)::after{
+    animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+.btn:hover{
+	background: white !important;
+	color: black !important;
+	transition: ease-out 1s;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, .25);
+}
+
+.btn{
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, .15);
+}
