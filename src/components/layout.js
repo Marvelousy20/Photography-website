@@ -20,11 +20,10 @@ const Layout = ({ children }) => {
       <div
         style={{
           maxWidth: `100%`,
-          marginTop: `50px`,
+          // marginTop: `20px`,
         }}
       >
-        <hr />
-        <main style = {{marginTop: '1rem'}}>{children}</main>
+        <main>{children}</main>
       </div>
       <Footer />
     </>

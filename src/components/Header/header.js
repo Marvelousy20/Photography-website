@@ -2,18 +2,32 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from './header.module.css'
-import { IoIosMenu, IoMdPhotos } from 'react-icons/io'
+import { IoMdPhotos } from 'react-icons/io'
 import { FaBlog } from 'react-icons/fa'
 import { GiPerson } from 'react-icons/gi'
-import { MdContactMail } from 'react-icons/md'
 import { RiContactsLine } from 'react-icons/ri'
-// import Image from '../../images/logo.svg'
-// import logos from '../Images/images/blessmas2.png'
-
+import { graphql, useStaticQuery } from 'gatsby'
 import { Navbar, Nav, NavDropdown,  } from 'react-bootstrap'
+import Img from 'gatsby-image'
+
 
 
 const Header = ({ siteTitle }) => {
+
+  const data =  useStaticQuery(graphql`
+      query logo {
+        file(relativePath: {eq: "blessmas.png"}) {
+          childImageSharp {
+            fixed(
+              height: 50
+              width: 50 
+            ) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+  `)
 
   const Myul = (props) => (
     <Link to = {props.to} className = {`${styles.links}`}>{props.children}</Link> 
@@ -21,8 +35,9 @@ const Header = ({ siteTitle }) => {
 
   return (
     <Navbar collapseOnSelect expand="md" bg="black" variant="dark" sticky = "top" className ={styles.containerFluid}>
-      <Navbar.Brand href="#home">
-          <div className = {styles.logo}></div>
+      <Navbar.Brand href="/">
+        <span>Blessmas</span> <span style = {{color: 'green'}}>Media</span>
+        {/* <Img fixed = {data.file.childImageSharp.fixed} /> */}
       </Navbar.Brand> 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

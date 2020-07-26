@@ -15,7 +15,7 @@ function Aboutus() {
                     ...GatsbyImageSharpFixed
                 }
             }
-            image2: imageSharp(fixed: {originalName: {eq: "c.jpg"}}) {
+            image2: imageSharp(fixed: {originalName: {eq: "d.jpg"}}) {
                 fixed{
                     ...GatsbyImageSharpFixed
                 }
@@ -25,7 +25,7 @@ function Aboutus() {
       
     return (
         <ScrollAnimation animateIn = "fadeIn">
-            <div style = {{fontFamily: 'Roboto, sans-serif', textAlign: 'center',}} className = {`mt-5 ${styles.cont}`}>
+            <div style = {{textAlign: 'center',}} className = {`mt-5 ${styles.cont}`}>
                 <span style = {{fontSize: '2rem', marginRight: '8px'}}>Photo</span>  <span style = {{color: 'green',fontSize: '2rem'}}>Proofing</span>
                 <p className = 'mt-3'>We allow our clients to choose the which photos they need.</p>
 

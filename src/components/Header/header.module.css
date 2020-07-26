@@ -2,15 +2,9 @@
     background: black;
 }
 
-.logo{
-    background: url('../Images/images/blessmas.png');
-    height: 100px !important;
-    width: 100px !important;
-    z-index: 1000px ;
-}
-
 .links{
     color: #fff;
+    padding: .2rem .85rem;
     margin-right: 2rem;
 }
 

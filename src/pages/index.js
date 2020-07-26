@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Text from "../components/Texts/text"
 import ImagesComponent from '../components/Images/images'
 import Aboutus from '../components/About/aboutus'
+import Contact from '../components/Contact/contact'
 
 
 const IndexPage = () => (
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <Text />
     <ImagesComponent />
     <Aboutus />
+    <Contact />
   </Layout>
 )
 

@@ -1,15 +1,59 @@
 import React from 'react'
 import Layout from '../components/layout'
+import styles from './about.module.css'
+import { useStaticQuery, graphql } from 'gatsby' 
+import BackgroundImage from 'gatsby-background-image'
+import { Link } from 'gatsby'
 
-function about() {
-
-
+function About() {
+    // const data = useStaticQuery(graphql`
+    //     query camera {
+    //         image1: imageSharp(fluid: {originalName: {eq: "camera.jpg"}}) {
+    //             fluid(maxWidth: 1920) {
+    //                 ...GatsbyImageSharpFluid
+    //             }
+    //         }
+    //     }
+    // `)  
+    
+    const data = useStaticQuery(graphql`
+        query MyQuery {
+            image: file(relativePath: {eq: "camera.jpg"}) {
+                childImageSharp {
+                    fixed(quality: 90, width: 1920, height: 1000) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+        }
+    `)
+    // const StyledBackgroundSection = styled(About)`
+    // width: 100%;
+    // background-position: bottom center;
+    // background-repeat: repeat-y;
+    // background-size: cover;
+    // `
+    const imageData = data.image.childImageSharp.fixed
     return (
         <Layout>
-            <div style = {{maxWidth: '1150px', margin: 'auto', marginTop: "10%",
-             color: 'rgba(255, 255, 255, .85)', padding: '0 3%', fontFamily: 'roboto'
-            }}>
-                <h2 style = {{color: 'rgba(200,200,200,.5)',  fontFamily: 'roboto'}}>--WHO WE ARE--</h2>
+            <div className = {styles.head}>
+                {/* <Img fluid = {data.image1.fluid} style ={{backgroundColor: 'yellow'}}/> */}
+                <BackgroundImage
+                    Tag = "section"
+                    fluid = {imageData}
+                    backgroundColor= 'purple'
+                    className = {styles.back}
+                    style = {{width: '100%', backgroundPosition: 'center', 
+                        backgroundRepeat: 'repeat-y', backgroundSize: 'cover',
+                        color: 'white', 
+                        textAlign: 'center',
+                        padding: '50px',
+                        marginBottom: '7%'
+                    }}
+                >
+                    <span className = {styles.about}>About us</span>
+                </BackgroundImage>
+                <div style = {{color: 'rgba(200,200,200,.5)',  fontSize: '1.4rem'}} className = 'mb-2'>--WHO WE ARE--</div>
                 <p>
                 Blessmas media as a brand is a subset of Blessmas multibiz Ltd which deals in a wide range of business
                 e.g consultancy, contract services, purchases and supply, impotr and export services and logistics.
@@ -32,13 +76,52 @@ function about() {
                     in the industry despite the competitive situation of the industry.
                 </p>
 
-                <h2  style = {{color: 'rgba(200,200,200,.5)', fontFamily: 'roboto'}}>--WHAT WE DO--</h2>
-                <h4 style = {{color: 'purple'}} className = "pl-5">Fashion and models</h4>
+                <div style = {{color: 'rgba(200,200,200,.5)',  fontSize: '1.4rem'}} className = 'mb-2'>--WHAT WE DO--</div>
+                
+                <div style = {{fontWeight: '600'}}>Event photography</div> 
+                <span>We shoot weddings, birthdays and any other events</span> <br /> <br />
 
+                <div style = {{fontWeight: '600'}}>Fashion and Beauty</div>
+                <span>We shoot fashion and beauty pictures</span>  <br /> <br />
 
+                <div style = {{fontWeight: '600'}}>Model</div>
+                <span>We shoot models</span>  <br /> <br />
+
+                <div style = {{fontWeight: '600'}}>documentary</div>
+                <span>We travel around the world to document historical events or locations</span>  <br /> <br />
+
+                <div style = {{fontWeight: '600'}}>Photo Journalism</div>
+                <span>We tell stories with our images, as our images. </span> <br /> <br />
+                <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR WORKING HOURS--</div>
+                <span>We are avalilable 24/7 and you can get in touch via all channels available 
+                    on our <Link to = '/contact'>contact page.</Link>
+                </span> <br /><br/>
+
+                <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR CHARGE--</div>
+                <span>We are affordable and we we assure the best of quality to our clients.</span> <br/><br/>
+
+                <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR CULTURE--</div>
+                <span>Our staff are well cultred in addressing customers, supply customers demand, meet our
+                    turn around time and all other requests and we assure our customers of the best they ever
+                    can get anywhere, anytime.
+                </span> <br/><br/>
+
+                <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR MISSION--</div>
+                <span>
+                    To promote photo journalism and enhance the development of African culture through the 
+                    stories we tell with our images.
+                </span> <br/><br/>
+
+                
+                <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR MOTTO</div>
+                <span>
+                    Giving life to your memories.
+                </span> <br/><br/>
+
+                
             </div>
         </Layout>
     )
 }
 
-export default about
+export default About
