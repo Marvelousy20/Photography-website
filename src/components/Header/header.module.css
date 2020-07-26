@@ -2,6 +2,10 @@
     background: black;
 }
 
+.a:hover {
+    text-decoration: none;
+}
+
 .links{
     color: #fff;
     padding: .2rem .85rem;

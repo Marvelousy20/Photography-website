@@ -8,7 +8,7 @@ import { GiPerson } from 'react-icons/gi'
 import { RiContactsLine } from 'react-icons/ri'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Navbar, Nav, NavDropdown,  } from 'react-bootstrap'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 
 
@@ -35,10 +35,10 @@ const Header = ({ siteTitle }) => {
 
   return (
     <Navbar collapseOnSelect expand="md" bg="black" variant="dark" sticky = "top" className ={styles.containerFluid}>
-      <Navbar.Brand href="/">
-        <span>Blessmas</span> <span style = {{color: 'green'}}>Media</span>
+      <Link to = '/' className = {styles.a}>
+        <span style = {{color: '#fff'}}>Blessmas</span> <span style = {{color: 'green'}}>Media</span>
+      </Link>
         {/* <Img fixed = {data.file.childImageSharp.fixed} /> */}
-      </Navbar.Brand> 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">

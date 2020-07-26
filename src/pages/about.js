@@ -56,19 +56,19 @@ function About() {
                 <div style = {{color: 'rgba(200,200,200,.5)',  fontSize: '1.4rem'}} className = 'mb-2'>--WHO WE ARE--</div>
                 <p>
                 Blessmas media as a brand is a subset of Blessmas multibiz Ltd which deals in a wide range of business
-                e.g consultancy, contract services, purchases and supply, impotr and export services and logistics.
+                e.g consultancy, contract services, purchases and supply, import and export services and logistics.
 
                 </p>
 
                 <p>
                     Blessmas media is the photography and media section of the brand. We are into major media aspects like 
-                    photography, film making, photo journelism etc.
+                    photography, film making, photo journalism etc.
                 </p>
 
                 <p>
                     We started opeartions in 2014 and now we are well known accross the country. We have branches in Ilorin,
                     Ogbomosho, Jebba, Ibadan, Lagos and Abuja. Our strength lies majorly on our integrity and passion to 
-                    deliver to our best to our clients.
+                    deliver our best to our clients.
                 </p>
 
                 <p>
@@ -91,17 +91,17 @@ function About() {
                 <span>We travel around the world to document historical events or locations</span>  <br /> <br />
 
                 <div style = {{fontWeight: '600'}}>Photo Journalism</div>
-                <span>We tell stories with our images, as our images. </span> <br /> <br />
+                <span>We tell stories with our images, as our images is our voice.</span> <br /> <br />
                 <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR WORKING HOURS--</div>
                 <span>We are avalilable 24/7 and you can get in touch via all channels available 
                     on our <Link to = '/contact'>contact page.</Link>
                 </span> <br /><br/>
 
                 <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR CHARGE--</div>
-                <span>We are affordable and we we assure the best of quality to our clients.</span> <br/><br/>
+                <span>We are affordable and we assure the best of quality to our clients.</span> <br/><br/>
 
                 <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR CULTURE--</div>
-                <span>Our staff are well cultred in addressing customers, supply customers demand, meet our
+                <span>Our staff are well cultured in addressing customers, supply customers demand, meet our
                     turn around time and all other requests and we assure our customers of the best they ever
                     can get anywhere, anytime.
                 </span> <br/><br/>
