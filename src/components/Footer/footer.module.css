@@ -1,32 +1,33 @@
-@media screen and (min-width: 800px) {
-    .office {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .d {
-        display: none;
-    }
-
-    .office {
-        width: 200%;
-    }
-
-    .image {
-        width: 200%;
-    }
-
-    .icons {
-        width: 250%;
-    }
-}
-
-
 .arrow {
     position: relative;
     top: -30px;
 }
 .arrow:hover {
+    background: dimgray;
+    color: #fff;
 	box-shadow: 0px 0px 20px rgba(50, 50, 50, .3);
+}
+
+.copywrite {
+    color: rgba(100, 100, 100, .7);
+}
+
+@media screen and (max-width: 700px) {
+    .display {
+        flex-direction: column;
+    }
+
+    .copywrite {
+        display: none;
+    }
+
+    .connect {
+        margin-top: 10px;
+    }
+
+    .copy {
+        display: block !important;
+        margin-top: 7px;
+        color: rgba(100, 100, 100, .7);
+    }
 }

@@ -4,8 +4,8 @@ import contactStyles from './pagecss/contact.module.css'
 
 function contact() {
     
-    const handleSubmit = () => {
-        console.log('submitted')
+    const handleSubmit = (event) => {
+        event.preventDefault() ;
     }
 
     return (
@@ -19,7 +19,7 @@ function contact() {
                 </span> <br /> <br />
                 <span>
                     What's on your mind? Talk to us and someone will get in touch with you 
-                    withing the 12 hours.
+                    within 12 hours.
                     Please make your suggestions too, if you have any. Thanks.
                 </span>
             </div>

@@ -32,7 +32,6 @@ const Header = ({ siteTitle }) => {
 
   return (
     <Navbar collapseOnSelect expand="md" bg="black" variant="dark" sticky = "top" className ={styles.containerFluid}
-      id = 'home'
     >
       <Link to = '/' className = {styles.a}>
         <span style = {{color: '#fff'}}>Blessmas</span> <span style = {{color: 'green'}}>Media</span>

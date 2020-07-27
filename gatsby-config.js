@@ -14,6 +14,7 @@ module.exports = {
         disableMinification: false,
       },
     },
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-anchor-links`, 
     {
       resolve: `gatsby-source-filesystem`,

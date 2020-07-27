@@ -7,7 +7,7 @@ function text() {
     return (
         <div style = {{maxWidth: '960px', textAlign: 'center', margin: '0 auto', color: 'rgba(255, 255, 255, .9)', 
             marginTop: '1rem'
-        }} className = {style.whole}>
+        }} className = {style.whole}  id = "home-id">
             <MDBAnimation type = "heartBeat"> 
             <p className = {`${style.cloudText}`}>
                 creative
