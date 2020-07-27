@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+.all {
+    background: #ffffff;
+    color: black;
+    padding: 5%;
+}
+
+.contact {
+    color: #fff ;
+    background: linear-gradient(to right, rgb(200,200,200), blue);
+    text-align: center;
+    padding: 50px;
+    font-family: 'Rubik', sans-serif; 
+}
+
+.text {
+    font-size: 3.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .all {
+        padding-top: 15%;
+    }
+
+    .text {
+        font-size: 2.2rem;
+    }
+
+}

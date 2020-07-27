@@ -12,6 +12,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header/header"
 import "./layout.css"
 import Footer from './Footer/footer'
+import { Element } from 'react-scroll'
+
+
+
 
 const Layout = ({ children }) => {
   return (
@@ -25,7 +29,9 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-      <Footer />
+      <Element id='example-destination' name='example-destination'>
+        <Footer id = 'some-id' />
+      </Element>
     </>
   )
 }

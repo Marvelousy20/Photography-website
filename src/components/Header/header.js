@@ -7,10 +7,7 @@ import { FaBlog } from 'react-icons/fa'
 import { GiPerson } from 'react-icons/gi'
 import { RiContactsLine } from 'react-icons/ri'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Navbar, Nav, NavDropdown,  } from 'react-bootstrap'
-// import Img from 'gatsby-image'
-
-
+import { Navbar, Nav } from 'react-bootstrap'
 
 const Header = ({ siteTitle }) => {
 
@@ -34,7 +31,9 @@ const Header = ({ siteTitle }) => {
   )
 
   return (
-    <Navbar collapseOnSelect expand="md" bg="black" variant="dark" sticky = "top" className ={styles.containerFluid}>
+    <Navbar collapseOnSelect expand="md" bg="black" variant="dark" sticky = "top" className ={styles.containerFluid}
+      id = 'home'
+    >
       <Link to = '/' className = {styles.a}>
         <span style = {{color: '#fff'}}>Blessmas</span> <span style = {{color: 'green'}}>Media</span>
       </Link>
@@ -45,7 +44,7 @@ const Header = ({ siteTitle }) => {
         </Nav>
         <Nav>
           <Myul to = '/work'><IoMdPhotos /> Work</Myul>
-          <Myul to = '/about'><GiPerson /> About</Myul>
+          <Myul to = '#about'><GiPerson /> About</Myul>
           <Myul to = '/blog'><FaBlog /> Blog</Myul>
           <Myul to = '/contact'><RiContactsLine /> Contact</Myul>
         </Nav>

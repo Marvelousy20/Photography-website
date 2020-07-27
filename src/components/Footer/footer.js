@@ -5,13 +5,23 @@ import { FaWhatsapp, FaFacebookF, FaInstagram, FaPhone } from 'react-icons/fa'
 import footerstyles from './footer.module.css'
 import Logo from '../Images/images/blessmas.png'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Header from '../Header/header'
+import * as Scroll from 'react-scroll';
+import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { TiArrowUpThick } from 'react-icons/ti'
+
 
 function footer() {
+
+    const scrollToTop = () => {
+        scroll.scrollToTop() ;
+    }
+    
     return (
         <ScrollAnimation animateIn = 'fadeIn'>
-        <div style = {{background: 'rgba(255, 255, 255, .98)', padding: '50px',
-        }} 
-            className = {`container-fluid text-primary ${footerstyles.cont}`}>
+        <div style = {{background: 'rgba(255, 255, 255, .98)', padding: '50px',}} 
+            className = {`container-fluid text-primary ${footerstyles.cont}`} id = 'header'>
             <div className = {`row ${footerstyles.rows}`}>
                 <div className = {`col-4 ${footerstyles.col}`}>
                     <div style ={{display: 'flex', flexDirection: 'column', 
@@ -19,8 +29,8 @@ function footer() {
                         <div className = {`${footerstyles.image} justify-content-center`}>
                             <img src = {Logo} alt = "logo" style = {{width: '60px', height: '60px'}} />                        
                         </div>
-                        <Link to = '/' className = 'mb-3'>Home</Link>
-                        <Link to = '#about' className = 'mb-3'>About</Link> 
+                        <Link to = '/' className = 'mb-3'>Home</Link> 
+                        <Link to = '/about' className = 'mb-3'>About</Link> 
                         <Link to = '/contact' className = 'mb-3'>Contact</Link>
                         <Link to = '/blog' className = 'mb-3'>Blog</Link>
                         <p className = {footerstyles.office}>
@@ -63,6 +73,9 @@ function footer() {
                     <small>Beside Purple hill hotel, fate road, ilorin.</small>
                 </div>
             </div>
+            <TiArrowUpThick onClick = {scrollToTop} style = {{float: 'right', width: '35px',
+                height: '35px'
+            }}  className = {footerstyles.arrow}/>
         </div>
         </ScrollAnimation>
     )

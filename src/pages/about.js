@@ -1,21 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
-import styles from './about.module.css'
+import styles from './pagecss/about.module.css'
 import { useStaticQuery, graphql } from 'gatsby' 
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 
-function About() {
-    // const data = useStaticQuery(graphql`
-    //     query camera {
-    //         image1: imageSharp(fluid: {originalName: {eq: "camera.jpg"}}) {
-    //             fluid(maxWidth: 1920) {
-    //                 ...GatsbyImageSharpFluid
-    //             }
-    //         }
-    //     }
-    // `)  
-    
+function About() {    
     const data = useStaticQuery(graphql`
         query MyQuery {
             image: file(relativePath: {eq: "camera.jpg"}) {
@@ -27,12 +17,6 @@ function About() {
             }
         }
     `)
-    // const StyledBackgroundSection = styled(About)`
-    // width: 100%;
-    // background-position: bottom center;
-    // background-repeat: repeat-y;
-    // background-size: cover;
-    // `
     const imageData = data.image.childImageSharp.fixed
     return (
         <Layout>
@@ -117,8 +101,6 @@ function About() {
                 <span>
                     Giving life to your memories.
                 </span> <br/><br/>
-
-                
             </div>
         </Layout>
     )

@@ -21,3 +21,12 @@
         width: 250%;
     }
 }
+
+
+.arrow {
+    position: relative;
+    top: -30px;
+}
+.arrow:hover {
+	box-shadow: 0px 0px 20px rgba(50, 50, 50, .3);
+}
