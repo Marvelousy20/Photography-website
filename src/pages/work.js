@@ -1,10 +1,12 @@
 import React from 'react'
+import Layout from '../components/layout'
+import Image from '../components/Images/images'
 
 function work() {
     return (
-        <div>
-            <h1>In progress!</h1>
-        </div>
+        <Layout>
+            <Image />
+        </Layout>
     )
 }
 

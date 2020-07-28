@@ -80,7 +80,9 @@ function footer() {
             </div>
                 height: '35px'
             }}  className = {footerstyles.arrow}/> */}
-
+            <div className = {`${footerstyles.image} justify-content-center`}>
+                <img src = {Logo} alt = "logo" style = {{width: '60px', height: '60px'}} />                        
+            </div>
             <div className = {`d-flex ${footerstyles.display}`}>
                 <div>
                     <span>Office location</span> <br/>
@@ -91,18 +93,18 @@ function footer() {
                 <div className = {`${footerstyles.connect}`}>
                     <div>Connect with us on our social medias</div>
                     <div className = 'mt-1'>
-                        <Link to = "#" className = 'mr-3'>
+                        <Link to = "https://wa.me/+2348064531175" className = 'mr-3' target="_blank" >
                             <FaWhatsapp style = {{width: '25px',  height: '25px', color: 'black'}} />
                         </Link>
 
-                        <Link to = "https://m.facebook.com/home.php" className = 'mr-3'>
+                        <Link to = "https://m.facebook.com/home.php" className = 'mr-3' target="_blank">
                             <FaFacebookF  style = {{width: '25px',  height: '25px', color: 'black'}}/>
                         </Link>
 
-                        <Link to = "https://www.instagram.com/blessmasmedia/" className = 'mr-3'>
+                        <Link to = "https://www.instagram.com/blessmasmedia/" className = 'mr-3' target="_blank" >
                             <FaInstagram  style = {{width: '25px',  height: '25px', color: 'black'}}/>
                         </Link>
-                        <Link to = "tel: 08064531175" className = 'mr-3'>
+                        <Link to = "tel:+2349064531175" className = 'mr-3' target="_blank" >
                             <FaPhone  style = {{width: '25px',  height: '25px', color: 'black'}}/>
                         </Link>
                     </div> 

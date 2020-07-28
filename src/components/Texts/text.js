@@ -6,7 +6,7 @@ import { MDBAnimation } from "mdbreact";
 function text() {
     return (
         <div style = {{maxWidth: '960px', textAlign: 'center', margin: '0 auto', color: 'rgba(255, 255, 255, .9)', 
-            marginTop: '1rem'
+            marginTop: '1rem', marginBottom: '3rem'
         }} className = {style.whole}  id = "home-id">
             <MDBAnimation type = "heartBeat"> 
             <p className = {`${style.cloudText}`}>
@@ -23,7 +23,7 @@ function text() {
                 <span>We give life to your memory.</span>
                 <span>Check out our most popular images.</span>
             </p>
-            <button className={`btn ${style.btn}`} style ={{background: '#1a578f', color: '#fff', marginTop: '3%', fontWeight: '600'}}>Discover my work</button>
+            <button className={`btn ${style.btn}`} style ={{background: '#1a578f', color: 'rgb(240, 240, 240)', marginTop: '3%', fontWeight: '600'}}>Discover our work</button>
         </div>
     )
 }

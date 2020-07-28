@@ -18,7 +18,7 @@ input:not(.btn), textarea {
     color: #fff !important;
     font-weight: 400 !important;
     font-size: 16px !important;
-    padding: 2.5% !important;
+    padding: 3.5% !important;
 }
 
 ::-webkit-input-placeholder {
@@ -31,9 +31,10 @@ input:not(.btn), textarea {
 }
 
 .btn:hover {
-    background: #fff;
+    background: rgba(26, 87, 143, .5);
+    color: rgb(250,250,250) ;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, .2);
-    transition: ease-in .5s;
+    transition: ease-in .2s;
 }
 
 @media screen and (max-width: 850px) {

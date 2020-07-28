@@ -64,14 +64,12 @@ body{
 	}
 
 	.btn {
-		/* margin-top: 7% !important; */
 		padding: 0.84rem 1.2rem;
 	}
 	
 	.home-title {
 		max-width: 350px !important;
 		margin-top: 3% !important;
-		/* font-weight: 400 !important; */
 	}
 }
 
@@ -145,12 +143,26 @@ body{
 }
 
 .btn:hover{
-	background: white !important;
-	color: black !important;
+	/* background: white !important; */
+	color: rgba(26, 87, 143, .5) ;
 	transition: ease-out 1s;
-	box-shadow: 0px 0px 20px rgba(255, 255, 255, .25);
+	box-shadow: 0px 0px 20px rgba(0,0,100,1);
 }
 
 .btn{
 	box-shadow: 0px 0px 20px rgba(255, 255, 255, .15);
 }
+
+@media screen and (max-width: 767px) {
+	.whole {
+		margin-top: 5rem !important;
+		margin-bottom: 10rem !important;
+	}
+}
+
+@media screen and (max-width: 645px) {
+	.btn {
+		padding: 0.60rem 1.2rem;
+	}
+}
+
