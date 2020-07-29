@@ -10,9 +10,9 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Images = () =>  {
   const data = useStaticQuery(graphql`
     query Images {
-      b: imageSharp(fluid: {originalName: {eq: "a.jpg"}}) {
-        fluid {
-          ...GatsbyImageSharpFluid
+      a: imageSharp(fixed: {originalName: {eq: "a.jpg"}}) {
+        fixed(quality: 16) {
+          ...GatsbyImageSharpFixed
         }
       }
       c: imageSharp(fixed: {originalName: {eq: "c.jpg"}}) {
@@ -234,7 +234,7 @@ const Images = () =>  {
   
     const images = [
       {
-        original: `${data.a.fluid.src}`,
+        original: `${data.a.fixed.src}`,
         thumbnail: `${data.a2.fixed.src}`,
         description: 'Photo Journalism'
       },
