@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import contactStyles from './pagecss/contact.module.css'
 import Axios from 'axios'
+import SEO from "../components/seo"
+
 
 function Contact() {
         const [state, setState] =  React.useState({
@@ -16,8 +18,8 @@ function Contact() {
         Axios.post(form.action, data).then(response => {
             if(response.status === 200) {
                 setState({getstatus: "SUCCESS"})
-                alert('Thank you, we will get in touch shotly.')
                 form.reset() ;
+                alert('Thank you, we will get in touch shotly.')
                 console.log(state.status)
             }
         }).catch(error => {
@@ -33,6 +35,7 @@ function Contact() {
     
     return (
         <Layout>
+            <SEO title = "Blessmas media photography - Contact us" description = "You can get in contact with with blessmas media photography through the following mediums" />
             <div className = {`${contactStyles.contact}`}>
                 <span className = {contactStyles.text}>Contact us</span>
             </div>
@@ -41,27 +44,25 @@ function Contact() {
                     We Want To Hear From You
                 </span> <br /> <br />
                 <span>
-                    What's on your mind? Talk to us and someone will get in touch with you 
-                    within 12 hours.
-                    Please make your suggestions too, if you have any. Thanks.
+                What's on your mind? Talk to us and someone will get in touch with you 
+                within 12 hours.
+                Please make your suggestions too, if you have any. Thanks.
                 </span>
             </div>
             <div style = {{background: '#1a578f', padding: '8%'}}>
-                    <form
-                        method = 'POST'
-                        action = "https://formspree.io/mrgyrwja"
-                        onSubmit = {submitForm}
-                    >
-                        <input type = 'text' className = 'form-control' placeholder = 'Your Name' required/>
-                        <input type = 'text' className = 'form-control' placeholder = 'Your phone' required/>
-                        <input type = 'text' className = 'form-control' placeholder = 'Your email' required/>
-                        <textarea className = 'form-control' placeholder = 'Your message' rows = '8' cols = '25' />
-                        {status === "SUCCESS" ? <p>submitted</p> :  <input type = 'submit' value = "SUBMIT" className = {`btn ${contactStyles.btn} mt-2`} 
-                            style = {{width: '50%'}}
-                        />}
-                        {status === "ERROR" && <p>Ooops! There was an error.</p>}
-                    </form>
-                </div>
+                <form
+                    method = 'POST'
+                    action = "https://formspree.io/mrgyrwja"
+                    onSubmit = {submitForm}
+                >
+                    <input type = 'text' className = 'form-control' placeholder = 'Your Name' required/>
+                    <input type = 'text' className = 'form-control' placeholder = 'Your phone' required/>
+                    <input type = 'text' className = 'form-control' placeholder = 'Your email' required/>
+                    <textarea className = 'form-control' placeholder = 'Your message' rows = '8' cols = '25' />  
+                    {status === "SUCCESS" ? <p>submitted</p> :  <input type = 'submit' value = "SUBMIT" className = {`btn ${contactStyles.btn} mt-2`} 
+                        style = {{width: '50%'}} />}
+                </form>
+            </div>
         </Layout>
     )
 }

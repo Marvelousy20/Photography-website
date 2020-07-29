@@ -4,6 +4,8 @@ import styles from './pagecss/about.module.css'
 import { useStaticQuery, graphql } from 'gatsby' 
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
+import SEO from "../components/seo"
+
 
 function About() {    
     const data = useStaticQuery(graphql`
@@ -20,6 +22,7 @@ function About() {
     const imageData = data.image.childImageSharp.fixed
     return (
         <Layout>
+            <SEO title = "Blessmas media photography - About us" description = "We shoot portraits, documentaries, models and fashions. Our main office is located in ilorin"/>
             <div className = {styles.head}>
                 {/* <Img fluid = {data.image1.fluid} style ={{backgroundColor: 'yellow'}}/> */}
                 <BackgroundImage
@@ -41,7 +44,6 @@ function About() {
                 <p>
                 Blessmas media as a brand is a subset of Blessmas multibiz Ltd which deals in a wide range of business
                 e.g consultancy, contract services, purchases and supply, import and export services and logistics.
-
                 </p>
 
                 <p>
@@ -61,7 +63,7 @@ function About() {
                 </p>
 
                 <div style = {{color: 'rgba(200,200,200,.5)',  fontSize: '1.4rem'}} className = 'mb-2'>--WHAT WE DO--</div>
-                
+                    
                 <div style = {{fontWeight: '600'}}>Event photography</div> 
                 <span>We shoot weddings, birthdays and any other events</span> <br /> <br />
 
@@ -96,7 +98,7 @@ function About() {
                     stories we tell with our images.
                 </span> <br/><br/>
 
-                
+                    
                 <div style = {{color: 'rgba(200,200,200,.5)', fontSize: '1.4rem'}}>--OUR MOTTO</div>
                 <span>
                     Giving life to your memories.

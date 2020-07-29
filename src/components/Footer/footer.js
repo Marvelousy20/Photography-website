@@ -11,6 +11,7 @@ import { animateScroll as scroll } from 'react-scroll'
 import { TiArrowUpThick } from 'react-icons/ti'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import { AiOutlineCopyright } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
 
 
 function footer() {
@@ -21,98 +22,44 @@ function footer() {
     }
 
     return (
-        <div style = {{background: 'rgba(255, 255, 255, .98)', padding: '30px 5%',}} 
+        <div style = {{padding: '30px 5%',}} 
             className = {`container-fluid text-primary ${footerstyles.cont}`} id = 'header'>
-            {/* <div className = {`row ${footerstyles.rows}`}>
-                <div className = {`col-4 ${footerstyles.col}`}>
-                    <div style ={{display: 'flex', flexDirection: 'column', 
-                    }} className = {`${footerstyles.m}`}>
-                        <div className = {`${footerstyles.image} justify-content-center`}>
-                            <img src = {Logo} alt = "logo" style = {{width: '60px', height: '60px'}} />                        
-                        </div>
-                        <span onClick={() => scrollTo('#home-id')} className = 'mb-3' style ={{cursor: 'pointer'}}>Home</span> 
-                        <Link to = '/about' className = 'mb-3'>About</Link> 
-                        <span onClick={() => scrollTo('#some-id')} className = 'mb-3'
-                            style ={{cursor: 'pointer'}}>
-                        contact
-                        </span>
-
-                        <Link to = '/blog' className = 'mb-3'>Blog</Link>
-                        <p className = {footerstyles.office}>
-                            <span>Office location</span> <br/>
-                            <small>Beside Purple hill hotel, fate road, ilorin.</small>
-                        </p>
-                    </div>
-                    <div className = {footerstyles.icons}>
-                        <Link to = "#" className = 'mr-3'>
-                            <FaWhatsapp style = {{width: '25px',  height: '25px'}} />
-                        </Link>
-
-                        <Link to = "https://m.facebook.com/home.php" className = 'mr-3'>
-                            <FaFacebookF  style = {{width: '25px',  height: '25px'}}/>
-                        </Link>
-
-                        <Link to = "https://www.instagram.com/blessmasmedia/" className = 'mr-3'>
-                            <FaInstagram  style = {{width: '25px',  height: '25px'}}/>
-                        </Link>
-
-                        <Link to = "tel: 08064531175" className = 'mr-3'>
-                            <FaPhone  style = {{width: '25px',  height: '25px'}}/>
-                        </Link>
-                    </div>   
-                </div>
-
-                <div className = {`${footerstyles.d} col-4`}>
-                    <div style ={{display: 'flex', flexDirection: 'column', 
-                    }} className = {`${footerstyles.m}`}>
-                        <span style ={{fontSize:  '1.2rem'}} className = 'mb-3'>Our Services</span> 
-                        <span className = 'mb-3'>Documentary</span>
-                        <span className = 'mb-3'>Beauty</span>
-                        <span className = 'mb-3'>Photo Journalism</span>
-                        <span className = 'mb-3'>Modelling</span>
-                    </div>
-                </div>
-
-                <div className = {`${footerstyles.d} col-4`}>
-                    <span style ={{fontSize:  '1.2rem'}}>Office location</span> <br/>
-                    <small>Beside Purple hill hotel, fate road, ilorin.</small>
-                </div>
-            </div>
-                height: '35px'
-            }}  className = {footerstyles.arrow}/> */}
             <div className = {`${footerstyles.image} justify-content-center`}>
-                <img src = {Logo} alt = "logo" style = {{width: '60px', height: '60px'}} />                        
+                <img src = {Logo} alt = "logo" style = {{width: '60px', height: '60px'}} alt = "logo" />                        
             </div>
             <div className = {`d-flex ${footerstyles.display}`}>
                 <div>
-                    <span>Office location</span> <br/>
-                    <span style = {{ color: 'black'}}>Beside Purple hill hotel, fate road, ilorin, kwara state.</span> <br />
+                    <span style = {{color: 'green'}}>Office location</span> <br/>
+                    <span style = {{ color: '#fff'}}>Beside Purple hill hotel, fate road, ilorin, kwara state.</span> <br />
                     <small className = {`${footerstyles.copywrite}`}><AiOutlineCopyright /> 2020, Blessmas multibiz Ltd. All Rights Reserved. </small>
                 </div>
                 <div className = "m-auto"></div>
-                <div className = {`${footerstyles.connect}`}>
+                <div className = {`${footerstyles.connect}`} style = {{color: 'green'}}>
                     <div>Connect with us on our social medias</div>
                     <div className = 'mt-1'>
                         <Link to = "https://wa.me/+2348064531175" className = 'mr-3' target="_blank" >
-                            <FaWhatsapp style = {{width: '25px',  height: '25px', color: 'black'}} />
+                            <FaWhatsapp style = {{width: '25px',  height: '25px', color: '#fff'}} />
                         </Link>
 
                         <Link to = "https://m.facebook.com/home.php" className = 'mr-3' target="_blank">
-                            <FaFacebookF  style = {{width: '25px',  height: '25px', color: 'black'}}/>
+                            <FaFacebookF  style = {{width: '25px',  height: '25px', color: '#fff'}}/>
                         </Link>
 
                         <Link to = "https://www.instagram.com/blessmasmedia/" className = 'mr-3' target="_blank" >
-                            <FaInstagram  style = {{width: '25px',  height: '25px', color: 'black'}}/>
+                            <FaInstagram  style = {{width: '25px',  height: '25px', color: '#fff'}}/>
                         </Link>
-                        <Link to = "tel:+2349064531175" className = 'mr-3' target="_blank" >
-                            <FaPhone  style = {{width: '25px',  height: '25px', color: 'black'}}/>
-                        </Link>
+                        <a href = "tel:+2349064531175" className = 'mr-3' target="_blank">
+                            <FaPhone  style = {{width: '25px',  height: '25px', color: '#fff'}} />
+                        </a>
+                          <a href = "mailto:Blessmas4life@gmail.com" className = 'mr-3' target="_blank" >
+                            <MdEmail  style = {{width: '25px',  height: '25px', color: '#fff'}}/>
+                        </a>
                     </div> 
                 </div>   
                 <small className = {`${footerstyles.copy} d-none`}><AiOutlineCopyright /> 2020, Blessmas multibiz Ltd. All Rights Reserved. </small>
             </div>
             <TiArrowUpThick onClick = {scrollToTop} style = {{float: 'right', width: '30px',
-                height: '30px'
+                height: '30px', color: 'rgb(200,200,200)'
             }} className = {`${footerstyles.arrow}`} />
         </div>
     )

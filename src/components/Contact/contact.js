@@ -16,8 +16,8 @@ function Contact() {
         Axios.post(form.action, data).then(response => {
             if(response.status === 200) {
                 setState({getstatus: "SUCCESS"})
-                alert('Thank you, we will get in touch shotly.')
                 form.reset() ;
+                alert('Thank you, we will get in touch shotly.')
                 console.log(state.getstatus)
             }
         }).catch(error => {

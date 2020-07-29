@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Blessmas Media`,
-    description: `We bring your memories to life.`,
-    author: `@gatsbyjs`,
+    title: `Blessmas Media photography`,
+    description: `Blessmas media photography brings your memories to life`,
+    author: `Afolabi Blessing Isaac`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/blessmas.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
