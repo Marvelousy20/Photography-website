@@ -1,13 +1,36 @@
 import React from 'react'
 import Layout from '../components/layout'
 import contactStyles from './pagecss/contact.module.css'
+import Axios from 'axios'
 
-function contact() {
+function Contact() {
+        const [state, setState] =  React.useState({
+        status: ''
+    }) ;
+        
+    const submitForm = (e) => {
+        e.preventDefault() ;
+        const form = e.target ;
+        const data = new FormData(form) ;
+
+        Axios.post(form.action, data).then(response => {
+            if(response.status === 200) {
+                setState({getstatus: "SUCCESS"})
+                alert('Thank you, we will get in touch shotly.')
+                form.reset() ;
+                console.log(state.status)
+            }
+        }).catch(error => {
+            setState({status: 'ERROR'})
+            alert(error)
+            console.log(state.status)
+        })
+    }    
+
+       
+
+    const {status} = state.status ; 
     
-    const handleSubmit = (event) => {
-        event.preventDefault() ;
-    }
-
     return (
         <Layout>
             <div className = {`${contactStyles.contact}`}>
@@ -24,18 +47,23 @@ function contact() {
                 </span>
             </div>
             <div style = {{background: '#1a578f', padding: '8%'}}>
-                    <form onSubmit = {handleSubmit}>
+                    <form
+                        method = 'POST'
+                        action = "https://formspree.io/mrgyrwja"
+                        onSubmit = {submitForm}
+                    >
                         <input type = 'text' className = 'form-control' placeholder = 'Your Name' required/>
                         <input type = 'text' className = 'form-control' placeholder = 'Your phone' required/>
                         <input type = 'text' className = 'form-control' placeholder = 'Your email' required/>
                         <textarea className = 'form-control' placeholder = 'Your message' rows = '8' cols = '25' />
-                        <input type = 'submit' value = "SUBMIT" className = {`btn ${contactStyles.btn} mt-2`} 
+                        {status === "SUCCESS" ? <p>submitted</p> :  <input type = 'submit' value = "SUBMIT" className = {`btn ${contactStyles.btn} mt-2`} 
                             style = {{width: '50%'}}
-                        />
+                        />}
+                        {status === "ERROR" && <p>Ooops! There was an error.</p>}
                     </form>
                 </div>
         </Layout>
     )
 }
 
-export default contact
+export default Contact

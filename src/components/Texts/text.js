@@ -1,6 +1,8 @@
 import React from 'react'
 import style from './text.module.css'
-import { MDBAnimation } from "mdbreact";
+import { MDBAnimation } from "mdbreact"
+import { Link } from 'gatsby'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 
 function text() {
@@ -23,7 +25,7 @@ function text() {
                 <span>We give life to your memory.</span>
                 <span>Check out our most popular images.</span>
             </p>
-            <button className={`btn ${style.btn}`} style ={{background: '#1a578f', color: 'rgb(240, 240, 240)', marginTop: '3%', fontWeight: '600'}}>Discover our work</button>
+            <span onClick={() => scrollTo('#work-id')} className={`btn ${style.btn}`} style ={{background: '#1a578f', color: 'rgb(240, 240, 240)', marginTop: '3%', fontWeight: '600'}}>Discover our work</span>
         </div>
     )
 }

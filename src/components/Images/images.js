@@ -8,35 +8,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 
 const Images = () =>  {
-
-  // const data = useStaticQuery(graphql`
-  //   query Images {
-  //     optimized: allFile(filter: {relativeDirectory: {eq: "optimized"}}) {
-  //       nodes {
-  //         childImageSharp {
-  //           fixed {
-  //             ...GatsbyImageSharpFixed
-  //           }
-
-  //           fluid {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }  
-  //     }
-  //     thumbnails: allFile(filter: {relativeDirectory: {eq: "thumbnails"}}) {
-  //       nodes {
-  //         id 
-  //         childImageSharp {
-  //           fixed(width: 100) {
-  //             ...GatsbyImageSharpFixed
-  //           }
-  //         }
-  //       }
-  //     }
-  //   } 
-  // `)
-
   const data = useStaticQuery(graphql`
     query Images {
       a: imageSharp(fluid: {originalName: {eq: "a.jpg"}}) {
@@ -44,7 +15,7 @@ const Images = () =>  {
           ...GatsbyImageSharpFluid
         }
       }
-      c: imageSharp(fluid: {originalName: {eq: "c.jpg"}}) {
+      c: imageSharp(fixed: {originalName: {eq: "c.jpg"}}) {
         fluid {
           ...GatsbyImageSharpFluid
         }
@@ -129,97 +100,129 @@ const Images = () =>  {
       }
 
       a2: imageSharp(fixed: {originalName: {eq: "a_tn.jpg"}}) {
-        fixed{
+        fixed(
+          width: 100
+        ){
           ...GatsbyImageSharpFixed
         }
       }
 
       c2: imageSharp(fixed: {originalName: {eq: "c_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ) { 
           ...GatsbyImageSharpFixed
         }
       }
 
       d2: imageSharp(fixed: {originalName: {eq: "d_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       e2: imageSharp(fixed: {originalName: {eq: "e_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       f2: imageSharp(fixed: {originalName: {eq: "f_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       g2: imageSharp(fixed: {originalName: {eq: "g_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       h2: imageSharp(fixed: {originalName: {eq: "h_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       i2: imageSharp(fixed: {originalName: {eq: "i_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       j2: imageSharp(fixed: {originalName: {eq: "j_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       k2: imageSharp(fixed: {originalName: {eq: "k_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       l2: imageSharp(fixed: {originalName: {eq: "l_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       m2: imageSharp(fixed: {originalName: {eq: "m_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       n2: imageSharp(fixed: {originalName: {eq: "n_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       l2: imageSharp(fixed: {originalName: {eq: "l_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       o2: imageSharp(fixed: {originalName: {eq: "o_tn.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
 
       p2: imageSharp(fixed: {originalName: {eq: "p.jpg"}}) {
-        fixed{ 
+        fixed(
+          width: 100
+        ){ 
           ...GatsbyImageSharpFixed
         }
       }
@@ -308,87 +311,8 @@ const Images = () =>  {
       },
     ]
 
-
-  // const images = [
-  //   {
-  //     original: `${data.a.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[0].childImageSharp.fixed.src}`,
-  //     description: 'Photo Journalism',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[13].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[11].childImageSharp.fixed.src}`,
-  //     description: 'Documentary',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[1].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[10].childImageSharp.fixed.src}`,
-  //     description: 'Documentary',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[11].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[13].childImageSharp.fixed.src}`,
-  //     description: 'Documentary',
-  //   }, 
-  //   {
-  //     original: `${data.optimized.nodes[5].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[8].childImageSharp.fixed.src}`,
-  //     description: 'Photo Journalism',
-  //   }, 
-  //   {
-  //     original: `${data.optimized.nodes[6].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[2].childImageSharp.fixed.src}`,
-  //     description: 'Model',
-  //   }, 
-  //   {
-  //     original: `${data.optimized.nodes[7].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[6].childImageSharp.fixed.src}`,
-  //     description: 'Beauty',
-  //   }, 
-  //   {
-  //     original: `${data.optimized.nodes[8].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[5].childImageSharp.fixed.src}`,
-  //     description: 'Beauty',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[9].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[12].childImageSharp.fixed.src}`,
-  //     description: 'Model',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[10].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[3].childImageSharp.fixed.src}`,
-  //     description: 'Photo Journalism',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[0].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[14].childImageSharp.fixed.src}`,
-  //     description: 'Creative',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[12].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[6].childImageSharp.fixed.src}`,
-  //     description: 'Nature',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[3].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[9].childImageSharp.fixed.src}`,
-  //     description: 'Model',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[2].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[4].childImageSharp.fixed.src}`,
-  //     description: 'Documentary',
-  //   },
-  //   {
-  //     original: `${data.optimized.nodes[4].childImageSharp.fluid.src}`,
-  //     thumbnail: `${data.thumbnails.nodes[7].childImageSharp.fixed.src}`,
-  //     description: 'Model',
-  //   },
-  // ];      
-
   return (
-    <div id = "scroll-div">
+    <div id = "work-id">
       <div style = {{padding: '2rem 15%'}}>
         <span style = {{fontSize: '2rem', marginRight: '8px',}}>
         Selected</span>
