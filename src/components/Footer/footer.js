@@ -41,14 +41,14 @@ function footer() {
                             <FaWhatsapp style = {{width: '25px',  height: '25px', color: '#fff'}} />
                         </Link>
 
-                        <Link to = "https://m.facebook.com/home.php" className = 'mr-3' target="_blank">
+                        <Link to = "https://www.facebook.com/blessmas" className = 'mr-3' target="_blank">
                             <FaFacebookF  style = {{width: '25px',  height: '25px', color: '#fff'}}/>
                         </Link>
 
                         <Link to = "https://www.instagram.com/blessmasmedia/" className = 'mr-3' target="_blank" >
                             <FaInstagram  style = {{width: '25px',  height: '25px', color: '#fff'}}/>
                         </Link>
-                        <a href = "tel:+2349064531175" className = 'mr-3' target="_blank">
+                        <a href = "tel:+2348064531175" className = 'mr-3' target="_blank">
                             <FaPhone  style = {{width: '25px',  height: '25px', color: '#fff'}} />
                         </a>
                           <a href = "mailto:Blessmas4life@gmail.com" className = 'mr-3' target="_blank" >
