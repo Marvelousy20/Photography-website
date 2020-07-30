@@ -6,15 +6,17 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import ScrollAnimation from 'react-animate-on-scroll'
 
-
 const Images = () =>  {
   const data = useStaticQuery(graphql`
     query Images {
-      a: imageSharp(fluid: {originalName: {eq: "a.jpg"}}) {
-        fluid {
-          ...GatsbyImageSharpFluid
+      b: allImageSharp(filter: {fluid: {originalName: {eq: "b.jpg"}}}) {
+        nodes {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
+
       c: imageSharp(fluid: {originalName: {eq: "c.jpg"}}) {
         fluid {
           ...GatsbyImageSharpFluid
@@ -230,11 +232,11 @@ const Images = () =>  {
   `)   
 
     
-  // console.log(data)
+  console.log(data)
   
     const images = [
       {
-        original: `${data.a.fluid.src}`,
+        original: `${data.b.nodes[0].fluid.src}`,
         thumbnail: `${data.a2.fixed.src}`,
         description: 'Photo Journalism'
       },
