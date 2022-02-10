@@ -38,7 +38,7 @@
     "animate.css": "^4.1.0",
     "gatsby-background-image": "^1.1.1",
     "gatsby-plugin-sass": "^2.3.12",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "2.0.5",
     "react-animate-on-scroll": "^2.1.5",
     "typeface-merriweather": "^0.0.72"
